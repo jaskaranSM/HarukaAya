@@ -68,9 +68,9 @@ if ENV:
     GBAN_LOGS = os.environ.get('GBAN_LOGS', None)
 
 else:
-from haruka.config import Development as Config
-TOKEN = Config.API_KEY
-try:
+    from haruka.config import Development as Config
+    TOKEN = Config.API_KEY
+    try:
     OWNER_ID = int(Config.OWNER_ID)
 except ValueError:
     raise Exception("Your OWNER_ID variable is not a valid integer.")
@@ -83,17 +83,17 @@ except ValueError:
 #MESSAGE_DUMP = Config.MESSAGE_DUMP
 OWNER_USERNAME = Config.OWNER_USERNAME
 
-try:
+    try:
     SUDO_USERS = set(int(x) for x in Config.SUDO_USERS or [])
 except ValueError:
     raise Exception("Your sudo users list does not contain valid integers.")
 
-try:
+    try:
     SUPPORT_USERS = set(int(x) for x in Config.SUPPORT_USERS or [])
 except ValueError:
     raise Exception("Your support users list does not contain valid integers.")
 
-try:
+    try:
     WHITELIST_USERS = set(int(x) for x in Config.WHITELIST_USERS or [])
 except ValueError:
     raise Exception("Your whitelisted users list does not contain valid integers.")
