@@ -1,1 +1,1 @@
-worker: python3 -m Haruka
+worker: python3 -m haruka
