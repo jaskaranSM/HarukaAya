@@ -66,8 +66,7 @@ if ENV:
     GBAN_LOGS = os.environ.get('GBAN_LOGS', None)
 
 else:
-
-from haruka.config import Development as Config
+     from haruka.config import Development as Config
 TOKEN = Config.API_KEY
 try:
     OWNER_ID = int(Config.OWNER_ID)
