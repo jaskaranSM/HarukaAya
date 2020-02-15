@@ -68,7 +68,7 @@ if ENV:
     GBAN_LOGS = os.environ.get('GBAN_LOGS', None)
 
 else:
-     from haruka.config import Development as Config
+from haruka.config import Development as Config
 TOKEN = Config.API_KEY
 try:
     OWNER_ID = int(Config.OWNER_ID)
@@ -114,7 +114,7 @@ ALLOW_EXCL = Config.ALLOW_EXCL
 MAPS_API = Config.MAPS_API
 API_WEATHER = Config.API_OPENWEATHER
 DEEPFRY_TOKEN = os.environ.get('DEEPFRY_TOKEN', "")
-
+TOKEN = os.environ.get('TOKEN', "")
 SUDO_USERS.add(OWNER_ID)
 
 updater = tg.Updater(TOKEN, workers=WORKERS)
